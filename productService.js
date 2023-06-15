@@ -1,17 +1,12 @@
 async function getProduct(productId) {
     const apiUrl = `https://fakestoreapi.com/products/${productId}`;
 
-    fetch(apiUrl)
-        .then(response => response.json())  
-        .then((data) => {
-            console.log(data);
-            return data;
-          })                         
-        .catch(err => console.error("Tivemos um erro na chamada API", err));
+    let dados = await fetch(apiUrl)
+    let response = await dados.json()
+    return response      
         
 }
 
 module.exports = getProduct;
-
 
 
