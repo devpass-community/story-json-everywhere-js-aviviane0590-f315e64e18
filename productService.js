@@ -13,5 +13,5 @@ async function getProduct(productId) {
 
 module.exports = getProduct;
 
-console.log(getProduct(10))
+
 
